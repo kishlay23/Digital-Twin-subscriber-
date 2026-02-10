@@ -1,0 +1,47 @@
+# Database Configuration
+database:
+  host: "10.165.23.54"
+  port: 5432
+  user: "postgres"
+  password: "admin"
+  name: "DigitalTwin"
+
+# MQTT Broker Configuration
+mqtt:
+  host: "10.165.23.54"
+  port: 1883
+  topic: "+/+/+/+/+"
+
+api:
+  host: "10.165.23.54"
+  port: 5001
+  sub_path: "/api/event"
+
+# Hardware ID to Twin/Zone Mapping
+# Key: hardware_id (uppercase, without 0x prefix)
+# Value: {twin_short_name, zone_short_name}
+hardware_mapping:
+  "519D000000000000":
+    twin_short_name: "HCHI"
+    zone_short_name: "BR"
+
+  "A3C4000000000000":
+    twin_short_name: "HCHI"
+    zone_short_name: "RC"
+
+  # "GHI789":
+  #   twin_short_name: "Factory_1"
+  #   zone_short_name: "production_floor"
+
+  # "TEMP001":
+  #   twin_short_name: "HCCI"
+  #   zone_short_name: "zoneB"
+
+  # "HUM001":
+  #   twin_short_name: "HCCI"
+  #   zone_short_name: "zoneB"
+
+  # "LIGHT001":
+  #   twin_short_name: "HCCI"
+  #   zone_short_name: "subzoneA1"
+  # Add more hardware_id mappings as needed
